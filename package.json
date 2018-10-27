@@ -1,0 +1,24 @@
+{
+  "name": "rsschool-codejam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sumOfOther.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatiaR/rsschool-codejam.git"
+  },
+  "author": "Katsiaryna Ramaniuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatiaR/rsschool-codejam/issues"
+  },
+  "homepage": "https://github.com/KatiaR/rsschool-codejam#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "mocha": "^5.2.0"
+  }
+}
