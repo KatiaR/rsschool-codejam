@@ -8,17 +8,18 @@ class BinarySearchTree {
   constructor(obj) {
     this.root = obj;
   }
+
   printByLevel() {
     if (!this.root) {
-      return console.log("No root node found");
+      throw new Error('No root node found');
     }
-    const newline = new Node("emptyNode");
+    const newline = new Node('emptyNode');
     const queue = [this.root, newline];
     const arr = [[]];
-    function recursion(queue) {
+    function recursion() {
       if (queue.length) {
         const node = queue.shift();
-        if (node.value !== "emptyNode") {
+        if (node.value !== 'emptyNode') {
           arr[arr.length - 1].push(node.value);
         }
         if (node === newline && queue.length) {
@@ -33,16 +34,17 @@ class BinarySearchTree {
         }
         return recursion(queue);
       }
+      return undefined;
     }
     recursion(queue);
     return arr;
   }
 }
 
-var tree = {
+const tree = {
   value: 100,
   left: { value: 90, left: { value: 70 }, right: { value: 99 } },
-  right: { value: 120, left: { value: 110 }, right: { value: 130 } }
+  right: { value: 120, left: { value: 110 }, right: { value: 130 } },
 };
-var treeObj = new BinarySearchTree(tree);
-console.log(treeObj.printByLevel());
+const treeObj = new BinarySearchTree(tree);
+treeObj.printByLevel();
